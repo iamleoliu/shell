@@ -62,11 +62,10 @@ rm *ipaddr*.log
 cd ../
 cd ../
 cd raw
-rm *ipaddr*.log
+rm ipaddr*.log
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
 
-cd ../
 cd ../
 
 ls -r ./processed/server_logs >> inventory.txt
