@@ -47,11 +47,13 @@ mkdir server_logs user_logs event_logs
 
 # 5. Copy all server log files (files with "server" in the name AND a .log extension) from ./data/raw to ./data/processed/server_logs
 cd ../
-cp raw/rawdata/server*.log processed/server_logs/
+mv raw/rawdata/* raw
+cp raw/server*.log processed/server_logs/
 
 # 6. Repeat the above step for user logs and event logs
-cp raw/rawdata/user*.log processed/user_logs/
-cp raw/rawdata/event*.log processed/event_logs/
+
+cp raw/user*.log processed/user_logs/
+cp raw/event*.log processed/event_logs/
 
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
 cd processed/user_logs/
